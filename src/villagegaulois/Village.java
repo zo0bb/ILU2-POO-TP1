@@ -45,15 +45,28 @@ public class Village {
 	public String afficherVillageois() {
 		StringBuilder chaine = new StringBuilder();
 		if (nbVillageois < 1) {
-			chaine.append("Il n'y a encore aucun habitant au village du chef "
-					+ chef.getNom() + ".\n");
+			chaine.append("Il n'y a encore aucun habitant au village du chef " + chef.getNom() + ".\n");
 		} else {
-			chaine.append("Au village du chef " + chef.getNom()
-					+ " vivent les légendaires gaulois :\n");
+			chaine.append("Au village du chef " + chef.getNom() + " vivent les légendaires gaulois :\n");
 			for (int i = 0; i < nbVillageois; i++) {
 				chaine.append("- " + villageois[i].getNom() + "\n");
 			}
 		}
 		return chaine.toString();
+	}
+
+	public class Marche {
+		private int nbEtals;
+		private String nom;
+		private Etal[] etals;
+
+		public Marche(int nbEtals) {
+			etals = new Etal[nbEtals];
+		}
+
+		void utiliserEtal(int indiceEtal, Gaulois vendeur, String produit, int nbProduit) {
+
+		}
+
 	}
 }
